@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 16px;
+}
+
+.grid-item {
+    background: rgb(177, 177, 177);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    line-height: 1.2; /* Збільшує міжрядковий інтервал для читабельності */
+    
+}
+
+.grid-item p {
+    margin-bottom: 10px; /* Відступ між абзацами */
+}
+
+/* Новий елемент, який займає два стовпці */
+.grid-header {
+    grid-column: span 2;
+    text-align: center;
+    background: rgb(177, 177, 177); /* Темніший фон для контрасту */
+}
+
+.grid-header h2 {
+    color: rgb(11, 72, 90);
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Адаптивний розмір */
+    margin: 0;
+}
+
+.Education {
+    height: 3rem;
+    position: relative;
+    top: 12px; /* Опускає іконку вниз */
+    padding-right: 12px;
+}
+
+.workwork {
+    height: 3rem;
+    position: relative;
+    top: 7px; /* Опускає іконку вниз */
+    padding-right: 0px; 
+}
+
+.edu h2 {
+    color: rgb(182, 255, 134);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+   
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* або overlay, або darken */
+}
+
+li {
+    margin-bottom: 10px; /* Додає відстань між елементами списку */
+  }
+
+.edu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+   
+    color: white; 
+    background-color: rgb(5, 37, 39);
+    
+    margin-top: 36px;
+    gap: 20px;
+    padding: 24px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(-45deg, #0d1b2a, #3a0ca3, #0096ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 16s ease infinite;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin-top: 16px;
+    color: white;
+    background: linear-gradient(-45deg, #0d1b2a, #3a0ca3, #0096ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 16s ease infinite;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    width: 80%;
+    margin-top: 20px; /* Додає відступ після хедера */
+}
+
+.box {
+    background-color: rgba(5, 24, 39, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+    
+}
+
+.btns {
+    gap: 24px;
+}
+
+.box:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: column;
+}
+
+.box:nth-child(2) button {
+            
+border: none;
+border-radius: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+width: 24vw; /* Пропорційна ширина */
+max-width: 280px; /* Максимальний розмір */
+min-width: 100px; /* Мінімальний розмір */
+font-size: 1.2em; /* Пропорційний розмір тексту */
+padding: 1.2em 1em; /* Пропорційний паддінг */
+white-space: nowrap; /* Заборона переносу тексту */
+}
+
+
+
+.box:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.box:nth-child(3) img {
+    width: 100%;
+    
+}
+
+.box:nth-child(4) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    flex-direction: column;
+}
+
+.box:nth-child(4) h3 {
+    margin: 0 0 10px;
+    
+}
+
+.box:nth-child(4) p {
+    margin: 0;
+    
+}
+
+.sh {
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.about p {
+    color: azure;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.about h3 {
+    color: aquamarine;
+    font-size: 1.8rem;
+}
+
+.message-btn {
+    background-color: #0096ff;
+    color: white;
+}
+.message-btn:hover {
+    background-color: #0126cc;
+}
+.message-btn:active {
+    transform: scale(0.95);
+}
+.email-btn {
+    background-color: white;
+    color: #0096ff;
+    border: 2px solid #0096ff;
+}
+.email-btn:hover {
+    background-color: #0126cc;
+    color: white;
+}
+.email-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.box h2 {
+    font-size: 2em;
+    opacity: 0;
+    position: relative;
+}
+.box h2:first-child {
+    transform: translateY(-100px);
+    animation: dropTop 3s ease-out forwards;
+}
+.box h2:last-child {
+    transform: translateY(100px);
+    animation: dropBottom 3s ease-out forwards;
+}
+
+@keyframes dropTop {
+    0% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(0);
+        opacity: 0.75;
+    }
+    60% {
+        transform: translateY(10px) translateX(-20px) rotate(-5deg);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-30px) translateX(20px) rotate(5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropBottom {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(0);
+        opacity: 0.75;
+    }
+    60% {
+        transform: translateY(-10px) translateX(20px) rotate(5deg);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(30px) translateX(-20px) rotate(-5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0);
+        opacity: 1;
+    }
+    
+}
+
+@media (max-width: 1280px) {
+    header {
+        font-size: 2rem;
+        height: 90px;
+        padding: 0 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: normal;
+    }
+
+    .container {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box:nth-child(1),
+    .box:nth-child(2),
+    .box:nth-child(3),
+    .box:nth-child(4)
+     {
+        width: 45%;
+    }
+
+    .box:nth-child(1) {
+        order: 1;
+        width: 95%;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .box:nth-child(3) {
+        order: 2;
+        width: 75%;
+        
+    }
+
+    .box:nth-child(4) {
+        order: 4;
+        width: 95%;
+    }
+
+    .box:nth-child(2) {
+        order: 3;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        font-size: 2vw; /* Пропорційний розмір тексту */
+        padding: 1.2em 1em; /* Пропорційний паддінг */
+        white-space: nowrap; /* Заборона переносу тексту */
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+    
+    .about h3 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1rem;
+        height: 80px;
+        padding: 0 5px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+        gap: 15px;
+    }
+
+    .box {
+        width: 100%; /* Робимо бокси на всю ширину */
+        padding: 10px;
+    }
+
+    .box:nth-child(1) {
+        order: 1;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .box:nth-child(3) {
+        order: 2;
+        width: 95%;
+        
+    }
+
+    .box:nth-child(2) {
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2vw; /* Пропорційний розмір тексту */
+        padding: 1.2em 1em; /* Пропорційний паддінг */
+        white-space: nowrap; /* Заборона переносу тексту */
+        width: 95%;
+        
+    }
+
+       .box:nth-child(4) {
+        order: 4;
+        width: 95%;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+    }
+    
+    .about h3 {
+        font-size: 1.2rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Один стовпець */
+            width: 95%; /* Займає 95% ширини екрану */
+            margin: 0 auto; /* Центрує сітку */
+        }
+    
+        .grid-header {
+            grid-column: span 1; /* Щоб займав тільки один стовпець */
+        }
+    }
+
+}
+
